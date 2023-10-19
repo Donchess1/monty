@@ -6,7 +6,7 @@
  * @counter: line_number
  * Return: no return
 */
-void f_mod(stack_t **head, unsigned int counter)
+void f_mod(stack_t **head, unsigned int num)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -19,7 +19,7 @@ void f_mod(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", num);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -28,7 +28,7 @@ void f_mod(stack_t **head, unsigned int counter)
 	h = *head;
 	if (h->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", num);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
