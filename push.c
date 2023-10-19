@@ -7,31 +7,31 @@
 */
 void f_push(stack_t **head, unsigned int num)
 {
-	int n, j = 0, flag = 0;
+	int b,  a = 0, flag = 0;
 
-	if (bus.arg)
+	if (leks.arg)
 	{
-		if (bus.arg[0] == '-')
-			j++;
-		for (; bus.arg[j] != '\0'; j++)
+		if (leks.arg[0] == '-')
+			a++;
+		for (; leks.arg[a] != '\0'; a++)
 		{
-			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+			if (leks.arg[a] > 57 || leks.arg[a] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", num);
-			fclose(bus.file);
-			free(bus.content);
+			fclose(leks.file);
+			free(leks.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", num);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(leks.file);
+		free(leks.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	n = atoi(bus.arg);
-	if (bus.lifi == 0)
-		addnode(head, n);
+	n = atoi(leks.arg);
+	if (leks.lifi == 0)
+		addnode(head, b);
 	else
-		addqueue(head, n);
+		addqueue(head, b);
 }

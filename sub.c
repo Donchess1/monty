@@ -16,8 +16,8 @@ void f_sub(stack_t **head, unsigned int num)
 	if (nod < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", num);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(leks.file);
+		free(leks.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

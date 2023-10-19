@@ -20,8 +20,8 @@ void f_mod(stack_t **head, unsigned int num)
 	if (lnt < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", num);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(leks.file);
+		free(leks.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -29,8 +29,8 @@ void f_mod(stack_t **head, unsigned int num)
 	if (h->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", num);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(leks.file);
+		free(leks.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
