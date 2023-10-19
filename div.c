@@ -8,15 +8,15 @@
 void f_div(stack_t **head, unsigned int num)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int lnt = 0, aux;
 
 	h = *head;
 	while (h)
 	{
 		h = h->next;
-		len++;
+		lnt++;
 	}
-	if (len < 2)
+	if (lnt < 2)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", num);
 		fclose(bus.file);

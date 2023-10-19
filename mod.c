@@ -9,15 +9,15 @@
 void f_mod(stack_t **head, unsigned int num)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int lnt = 0, auxi;
 
 	h = *head;
 	while (h)
 	{
 		h = h->next;
-		len++;
+		lnt++;
 	}
-	if (len < 2)
+	if (lnt < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", num);
 		fclose(bus.file);
@@ -34,8 +34,8 @@ void f_mod(stack_t **head, unsigned int num)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	aux = h->next->n % h->n;
-	h->next->n = aux;
+	auxi = h->next->n % h->n;
+	h->next->n = auxi;
 	*head = h->next;
 	free(h);
 }
