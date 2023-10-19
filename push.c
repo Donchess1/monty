@@ -22,6 +22,7 @@ void f_push(stack_t **head, unsigned int num)
 			fclose(bus.file);
 			free(bus.content);
 			free_stack(*head);
+<<<<<<< HEAD
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -34,6 +35,18 @@ void f_push(stack_t **head, unsigned int num)
 		exit(EXIT_FAILURE); 
 	}
 	a = atoi(bus.arg);
+=======
+			exit(EXIT_FAILURE); 
+		}
+	else
+	{ fprintf(stderr, "L%d: usage: push integer\n", num);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	n = atoi(bus.arg);
+>>>>>>> 429f983d75f0cef9a3b97ec3d8ccbc0c21592e93
 	if (bus.lifi == 0)
 		addnode(head, a);
 	else
