@@ -29,7 +29,7 @@ void f_push(stack_t **head, unsigned int num)
 		free(leks.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	n = atoi(leks.arg);
+	b = atoi(leks.arg);
 	if (leks.lifi == 0)
 		addnode(head, b);
 	else
